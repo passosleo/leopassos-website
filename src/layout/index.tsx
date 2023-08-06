@@ -8,7 +8,7 @@ export function Layout({ children }: Props) {
   return (
     <>
       <Header />
-      {children}
+      <main>{children}</main>
     </>
   );
 }

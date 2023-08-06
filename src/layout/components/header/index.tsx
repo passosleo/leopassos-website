@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CustomLink } from '../../../components/CustomLink';
+import { CustomLink } from '../../../components/custom-link';
 import logo from '../../../assets/logo.svg';
 
 export function Header() {
@@ -29,7 +29,7 @@ export function Header() {
   ];
 
   return (
-    <div className="flex items-center justify-around p-4">
+    <header className="flex items-center justify-around p-4">
       <div className="cursor-pointer">
         <img src={logo as unknown as string} alt="logo" className="w-48" />
       </div>
@@ -48,6 +48,6 @@ export function Header() {
           ))}
         </ul>
       </div>
-    </div>
+    </header>
   );
 }
