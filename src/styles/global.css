@@ -22,3 +22,22 @@ a {
   color: inherit;
 }
 
+.navbar-active {
+  margin-right: 0%;
+  transition: margin-right 300ms ease-in-out;
+}
+
+.navbar-inactive {
+  margin-right: -100%;
+  transition: margin-right 300ms ease-in-out;
+}
+
+.fade-in {
+  opacity: 0.5;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}

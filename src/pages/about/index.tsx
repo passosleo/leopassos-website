@@ -12,7 +12,7 @@ export function About() {
         <CustomText className="text-2xl text-justify text-grey-light max-w-3xl">
           I’m a full-stack web developer specialized in building amazing digital experiences. Currently, I’m studying
           Technology in Systems Analysis and Development and focused on building accessible, robust and fast web
-          solutions at
+          solutions at{' '}
           <a className="text-yellow" href="https://www.lighthouseit.com.br/" target="_blank">
             LighthouseIt.
           </a>
