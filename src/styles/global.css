@@ -8,6 +8,7 @@ html {
   color: #FBFBFB;
   background-color: #111111;
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 * {

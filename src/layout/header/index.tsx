@@ -4,8 +4,8 @@ import { NavBar } from './components/nav-bar';
 
 export function Header() {
   return (
-    <header className="flex items-center justify-center ">
-      <div className="flex items-center justify-between max-w-7xl w-full p-4">
+    <header className="flex items-center justify-center fixed h-20 top-0 left-0 right-0 bg-black z-50">
+      <div className="flex items-center justify-between max-w-7xl w-full px-4">
         <Brand logo={logo as unknown as string} className="w-52" />
         <NavBar
           links={[
