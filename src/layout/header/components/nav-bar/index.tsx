@@ -41,7 +41,7 @@ export function NavBar({ links }: Props) {
         <nav
           className={`${
             isOpen ? 'navbar-active' : 'navbar-inactive'
-          } fixed top-0 right-0 p-4 h-full bg-grey-dark flex flex-col gap-5 items-center justify-center z-20`}
+          } fixed top-0 right-0 px-8 h-full bg-grey-dark flex flex-col gap-5 items-center justify-center z-20`}
         >
           {renderLinks()}
         </nav>
