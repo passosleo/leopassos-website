@@ -8,7 +8,7 @@ export function Layout({ children }: Props) {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center justify-center max-w-7xl mx-auto mt-20">{children}</main>
+      <main className="flex flex-col items-center justify-center max-w-7xl mx-auto px-4 mt-20">{children}</main>
     </>
   );
 }
