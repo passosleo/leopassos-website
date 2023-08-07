@@ -11,7 +11,7 @@ export function CustomButton({ children, className, type = 'button', rightIcon, 
       {...rest}
       type={type}
       className={twMerge(
-        'border-2 border-yellow text-yellow p-3 text-lg rounded-md flex items-center justify-center',
+        'border-2 border-yellow text-yellow p-3 text-lg font-bold rounded-md flex items-center justify-center hover:bg-yellow hover:text-black transition-colors duration-300',
         className,
       )}
     >
