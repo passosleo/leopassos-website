@@ -21,7 +21,7 @@ export function About() {
           </a>
         </CustomText>
       </div>
-      <a href="https://github.com/passosleo" target="_blank" className="max-w-xs">
+      <a href="https://github.com/passosleo" target="_blank" className="w-fit">
         <CustomButton rightIcon={<GitHubIcon />}>Checkout my GitHub!</CustomButton>
       </a>
     </CustomSection>
