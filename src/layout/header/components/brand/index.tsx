@@ -7,7 +7,7 @@ type Props = React.HTMLAttributes<HTMLDivElement> & {
 export function Brand({ logo, className, ...rest }: Props) {
   return (
     <div className={twMerge('cursor-pointer', className)} {...rest}>
-      <img src={logo} alt="logo" className="w-full" />
+      <img src={logo} alt="logo" className="w-full h-auto" />
     </div>
   );
 }
