@@ -14,11 +14,14 @@ export function useNavBar() {
     const elementIds = ['about', 'experience', 'skills', 'contact'];
     const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
-    for (const id of elementIds) {
+    for (const [index, id] of elementIds.entries()) {
       const element = document.getElementById(id);
       if (element) {
         const rect = element.getBoundingClientRect();
-        if (rect.top <= windowHeight - 250 && rect.bottom - 250 >= 0) {
+        const topThreshold = index === 0 ? 0 : 250;
+        const bottomThreshold = index === elementIds.length - 1 ? 0 : 500;
+
+        if (rect.top <= windowHeight - topThreshold && rect.bottom - bottomThreshold >= 0) {
           setVisibleElement(id);
           break; // Sair do loop após encontrar o primeiro elemento visível
         }

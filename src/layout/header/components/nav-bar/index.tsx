@@ -10,7 +10,7 @@ type Props = {
 
 export function NavBar({ links }: Props) {
   const { isTabletOrMobile } = useMediaQuery();
-  const { isOpen, handleOnLinkClick, selectedLink, setIsMenuOpen, visibleElement } = useNavBar();
+  const { isOpen, handleOnLinkClick, setIsMenuOpen, visibleElement } = useNavBar();
 
   function renderLinks() {
     return links.map(({ label, href }, index) => (

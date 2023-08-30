@@ -18,9 +18,9 @@ export function Timeline({ labels }: Props) {
           const isFirstItem = index === 0;
           const isLastItem = index === labels.length - 1;
 
-          const timelineBackgroundClass = `bg-grey-dark w-full flex items-center h-2 ${
+          const timelineBackgroundClass = `bg-grey-dark flex items-center h-2 ${
             isFirstItem ? 'ml-auto' : isLastItem ? 'mr-auto' : ''
-          } ${isFirstItem || isLastItem ? 'w-1/2' : ''}`;
+          } ${isFirstItem || isLastItem ? 'w-1/2' : 'w-full'}`;
 
           return (
             <div key={index} className="flex flex-col items-center w-full">
