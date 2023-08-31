@@ -10,15 +10,18 @@ type Props = {
 
 export function NavBar({ links }: Props) {
   const { isTabletOrMobile } = useMediaQuery();
-  const { isOpen, handleOnLinkClick, selectedLink, setIsMenuOpen } = useNavBar();
+  const { isOpen, handleOnLinkClick, setIsMenuOpen, activeLink } = useNavBar();
 
   function renderLinks() {
-    return links.map(({ label, href }, index) => (
+    return links.map(({ label, href, onClick }, index) => (
       <CustomLink
         key={index}
         href={href}
-        onClick={() => handleOnLinkClick(label)}
-        isSelected={selectedLink === label}
+        onClick={() => {
+          handleOnLinkClick(label);
+          if (onClick) onClick();
+        }}
+        isSelected={activeLink === label}
         className="hover:text-white text-lg"
       >
         {label}

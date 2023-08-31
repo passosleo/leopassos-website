@@ -6,7 +6,14 @@ type Props = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 export function CustomLink({ className, children, isSelected, ...rest }: Props) {
   return (
-    <a {...rest} className={twMerge('hover:text-yellow', isSelected ? 'border-b-2 border-yellow' : '', className)}>
+    <a
+      {...rest}
+      className={twMerge(
+        'hover:text-yellow border-b-2',
+        isSelected ? 'border-yellow' : 'border-transparent',
+        className,
+      )}
+    >
       {children}
     </a>
   );
