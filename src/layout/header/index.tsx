@@ -1,4 +1,4 @@
-import logo from '../../assets/logo.svg';
+import logo from '/logo.svg';
 import { logEventAnalytics } from '../../firebase';
 import { Brand } from './components/brand';
 import { NavBar } from './components/nav-bar';
