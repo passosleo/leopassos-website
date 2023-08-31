@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react';
 export function useNavBar() {
   const [isOpen, setIsMenuOpen] = useState(false);
   const [selectedLink, setSelectedLink] = useState('about');
-  const [visibleElement, setVisibleElement] = useState<string | null>(null);
+  const [activeLink, setActiveLink] = useState<string | null>(null);
   const [autoScrolling, setAutoScrolling] = useState(false);
 
   function handleOnLinkClick(label: string) {
-    setAutoScrolling(true);
     setSelectedLink(label);
+    setAutoScrolling(true);
     if (isOpen) setIsMenuOpen(false);
   }
 
@@ -28,12 +28,12 @@ export function useNavBar() {
             if (autoScrolling && id === selectedLink) {
               setTimeout(() => {
                 setAutoScrolling(false);
-                setVisibleElement(id);
+                setActiveLink(id);
               }, 100);
             }
 
             if (!autoScrolling) {
-              setVisibleElement(id);
+              setActiveLink(id);
             }
             break;
           }
@@ -53,6 +53,6 @@ export function useNavBar() {
     setIsMenuOpen,
     selectedLink,
     handleOnLinkClick,
-    visibleElement,
+    activeLink,
   };
 }

@@ -2,6 +2,7 @@ import { CustomButton } from '../../components/custom-button';
 import { CustomSection } from '../../components/custom-section';
 import { CustomText } from '../../components/custom-text';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { logEventAnalytics } from '../../firebase';
 
 export function About() {
   return (
@@ -16,12 +17,22 @@ export function About() {
           I’m a full-stack web developer specialized in building amazing digital experiences. Currently, I’m studying
           Technology in Systems Analysis and Development and focused on building accessible, robust and fast web
           solutions at{' '}
-          <a className="text-yellow" href="https://www.lighthouseit.com.br/" target="_blank">
+          <a
+            className="text-yellow"
+            href="https://www.lighthouseit.com.br/"
+            target="_blank"
+            onClick={() => logEventAnalytics('click_company_link')}
+          >
             LighthouseIt.
           </a>
         </CustomText>
       </div>
-      <a href="https://github.com/passosleo" target="_blank" className="w-fit">
+      <a
+        href="https://github.com/passosleo"
+        target="_blank"
+        onClick={() => logEventAnalytics('click_github_profile')}
+        className="w-fit"
+      >
         <CustomButton rightIcon={<GitHubIcon />}>Checkout my GitHub!</CustomButton>
       </a>
     </CustomSection>
