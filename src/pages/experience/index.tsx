@@ -1,6 +1,6 @@
-import { CustomSection } from '../../components/custom-section';
-import { CustomText } from '../../components/custom-text';
-import { Timeline } from '../../components/timeline';
+import { Timeline } from '../../components/Timeline';
+import { CustomText } from '../../components/CustomText';
+import { CustomSection } from '../../components/CustomSection';
 
 export function Experience() {
   return (
@@ -10,12 +10,12 @@ export function Experience() {
         professional development and certainly helped me to get where I am.
       </CustomText>
       <Timeline
-        labels={[
+        data={[
           {
             title: 'Academia da Informática',
-            position: 'Technical Manager',
+            subtitle: 'Technical Manager',
             year: '2018 - 2019',
-            responsibilities: [
+            list: [
               'IT Support and consultancy',
               'Software Help Desk',
               'Hardware and software mainentance',
@@ -25,9 +25,9 @@ export function Experience() {
           },
           {
             title: 'Grupo W2A Brasil',
-            position: 'Software QA Tester',
+            subtitle: 'Software QA Tester',
             year: '2021',
-            responsibilities: [
+            list: [
               'Mobile and SaaS software testing',
               'User Acceptance Testing',
               'Software usability documentation',
@@ -36,9 +36,9 @@ export function Experience() {
           },
           {
             title: 'LighthouseIt',
-            position: 'Full-Stack Web Developer',
+            subtitle: 'Full-Stack Web Developer',
             year: '2021 - now',
-            responsibilities: [
+            list: [
               'Accessible and responsive web pages and mobile applications',
               'Restful API’s and integrations',
               'Relational database management',

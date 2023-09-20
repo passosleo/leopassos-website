@@ -1,6 +1,6 @@
 import { twMerge } from 'tailwind-merge';
 
-type Props = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+type Props = React.ComponentProps<'a'> & {
   isSelected?: boolean;
 };
 

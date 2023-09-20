@@ -1,6 +1,6 @@
-import { CustomButton } from '../../components/custom-button';
-import { CustomSection } from '../../components/custom-section';
-import { CustomText } from '../../components/custom-text';
+import { CustomButton } from '../../components/CustomButton';
+import { CustomSection } from '../../components/CustomSection';
+import { CustomText } from '../../components/CustomText';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { logEventAnalytics } from '../../firebase';
 

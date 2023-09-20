@@ -1,6 +1,6 @@
 import { twMerge } from 'tailwind-merge';
 
-type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+type Props = React.ComponentProps<'button'> & {
   rightIcon?: React.ReactNode;
   leftIcon?: React.ReactNode;
 };

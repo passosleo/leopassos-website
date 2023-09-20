@@ -1,8 +1,9 @@
 import { useMediaQuery } from '../../../../hooks/useMediaQuery';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from '../../../../@types/types';
-import { CustomLink } from '../../../../components/custom-link';
+import { Link } from '../../../../types/types';
+import { CustomLink } from '../../../../components/CustomLink';
 import { useNavBar } from './hooks/useNavBar';
+import { twMerge } from 'tailwind-merge';
 
 type Props = {
   links: Link[];
@@ -36,15 +37,17 @@ export function NavBar({ links }: Props) {
 
         <div
           onClick={() => setIsMenuOpen(false)}
-          className={`${
-            isOpen ? 'fixed fade-in' : 'hidden fade-out'
-          } top-0 w-full h-full right-0 z-10 bg-black cursor-pointer`}
+          className={twMerge(
+            'top-0 w-full h-full right-0 z-10 bg-black cursor-pointer',
+            isOpen ? 'fixed fade-in' : 'hidden fade-out',
+          )}
         />
 
         <nav
-          className={`${
-            isOpen ? 'navbar-active' : 'navbar-inactive'
-          } fixed top-0 right-0 px-8 h-full bg-grey-dark flex flex-col gap-5 items-center justify-center z-20`}
+          className={twMerge(
+            'fixed top-0 right-0 px-8 h-full bg-grey-dark flex flex-col gap-5 items-center justify-center z-20',
+            isOpen ? 'navbar-active' : 'navbar-inactive',
+          )}
         >
           {renderLinks()}
         </nav>

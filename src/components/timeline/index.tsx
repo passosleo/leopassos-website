@@ -1,22 +1,22 @@
-type JobExperience = {
+type TimelineData = {
   title: string;
-  position: string;
+  subtitle: string;
   year: string;
-  responsibilities: string[];
+  list: string[];
 };
 
 type Props = {
-  labels: JobExperience[];
+  data: TimelineData[];
 };
 
-export function Timeline({ labels }: Props) {
+export function Timeline({ data }: Props) {
   return (
     <div className="relative overflow-x-auto">
       <div className="flex justify-between w-full">
-        {labels.map(({ title, year, position, responsibilities }, index) => {
-          const isUniqueItem = labels.length === 1;
+        {data.map(({ title, subtitle, year, list }, index) => {
+          const isUniqueItem = data.length === 1;
           const isFirstItem = index === 0;
-          const isLastItem = index === labels.length - 1;
+          const isLastItem = index === data.length - 1;
 
           const timelineBackgroundClass = `bg-grey-dark flex items-center h-2 ${
             isFirstItem ? 'ml-auto' : isLastItem ? 'mr-auto' : ''
@@ -33,14 +33,14 @@ export function Timeline({ labels }: Props) {
               <div className="w-64 mx-5">
                 <div className="font-bold mt-4 text-center">
                   <p>{title}</p>
-                  <p className="text-yellow">{position}</p>
+                  <p className="text-yellow">{subtitle}</p>
                 </div>
 
                 <div className="flex flex-col gap-1 p-4">
-                  {responsibilities.map((responsibility, index) => (
+                  {list.map((item, index) => (
                     <div className="flex items-center self-start" key={index}>
                       <span className="mr-2 text-xl">&bull;</span>
-                      <p className="text-grey-light">{responsibility}</p>
+                      <p className="text-grey-light">{item}</p>
                     </div>
                   ))}
                 </div>
