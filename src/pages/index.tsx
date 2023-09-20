@@ -13,8 +13,9 @@ export function App() {
       <Skills />
       <CustomSection id="contact">
         <CustomText className="text-2xl text-justify text-grey-light">
-          Before becoming a web developer, I had other experiences in the IT world that were fundamental to my
-          professional development and certainly helped me to get where I am.
+          Before becoming a web developer, I had other experiences in the IT
+          world that were fundamental to my professional development and
+          certainly helped me to get where I am.
         </CustomText>
       </CustomSection>
     </Layout>

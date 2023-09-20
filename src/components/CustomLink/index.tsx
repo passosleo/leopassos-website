@@ -4,7 +4,12 @@ type Props = React.ComponentProps<'a'> & {
   isSelected?: boolean;
 };
 
-export function CustomLink({ className, children, isSelected, ...rest }: Props) {
+export function CustomLink({
+  className,
+  children,
+  isSelected,
+  ...rest
+}: Props) {
   return (
     <a
       {...rest}

@@ -15,7 +15,8 @@ export function useNavBar() {
   useEffect(() => {
     function observeElementVisibility() {
       const elementIds = ['about', 'experience', 'skills', 'contact'];
-      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      const windowHeight =
+        window.innerHeight || document.documentElement.clientHeight;
 
       for (const [index, id] of elementIds.entries()) {
         const element = document.getElementById(id);
@@ -24,7 +25,10 @@ export function useNavBar() {
           const topThreshold = index === 0 ? 0 : 250;
           const bottomThreshold = index === elementIds.length - 1 ? 0 : 500;
 
-          if (rect.top <= windowHeight - topThreshold && rect.bottom - bottomThreshold >= 0) {
+          if (
+            rect.top <= windowHeight - topThreshold &&
+            rect.bottom - bottomThreshold >= 0
+          ) {
             if (autoScrolling && id === selectedLink) {
               setTimeout(() => {
                 setAutoScrolling(false);

@@ -1,19 +1,30 @@
-import code_icon from '/code_icon.svg';
-import tool_icon from '/tool_icon.svg';
-import framework_icon from '/framework_icon.svg';
+import CodeIcon from '/code_icon.svg';
+import ToolIcon from '/tool_icon.svg';
+import FrameworkIcon from '/framework_icon.svg';
 import { SkillCard } from './components/SkillCard';
 import { CustomSection } from '../../components/CustomSection';
 
 export function Skills() {
   return (
-    <CustomSection id="skills" className="flex-row flex-wrap justify-center items-start gap-5">
+    <CustomSection
+      id="skills"
+      className="flex-row flex-wrap justify-center items-start gap-5"
+    >
       <SkillCard
-        logo={code_icon}
+        logo={CodeIcon}
         title="Languages and Technologies"
-        list={['Javascript', 'Typescript', 'Node.JS', 'C#', 'HTML', 'CSS', 'SQL']}
+        list={[
+          'Javascript',
+          'Typescript',
+          'Node.JS',
+          'C#',
+          'HTML',
+          'CSS',
+          'SQL',
+        ]}
       />
       <SkillCard
-        logo={framework_icon}
+        logo={ToolIcon}
         title="Libraries and Frameworks"
         list={[
           'Express',
@@ -30,9 +41,17 @@ export function Skills() {
         ]}
       />
       <SkillCard
-        logo={tool_icon}
+        logo={FrameworkIcon}
         title="Tools and Others"
-        list={['Git', 'RESTful API’s', 'Keycloak', 'Firebase', 'Docker', 'Portainer', 'NGINX']}
+        list={[
+          'Git',
+          'RESTful API’s',
+          'Keycloak',
+          'Firebase',
+          'Docker',
+          'Portainer',
+          'NGINX',
+        ]}
       />
     </CustomSection>
   );
