@@ -1,26 +1,34 @@
 import { CustomCard } from '../../../../components/CustomCard';
+import { CustomLink } from '../../../../components/CustomLink';
 import { CustomText } from '../../../../components/CustomText';
 
 type Props = React.ComponentProps<'div'> & {
   logo: string;
   title: string;
-  list: string[];
+  list: {
+    label: string;
+    link?: string;
+  }[];
 };
 
 export function SkillCard({ logo, title, list, ...props }: Props) {
   return (
-    <CustomCard
-      {...props}
-      className="flex flex-col items-center justify-center w-80"
-    >
-      <img src={logo} alt={title} className="w-24 h-24" />
-      <CustomText className="text-yellow font-semibold text-xl text-center my-4 w-52">
-        {title}
-      </CustomText>
-      <ul className="flex flex-col items-start gap-2 self-start mx-14">
-        {list.map((item, index) => (
+    <CustomCard {...props} className="p-8 w-72 h-116">
+      <div className="flex flex-col items-center justify-center">
+        <img src={logo} alt={title} className="w-24 h-24" />
+        <div className="min-h-14 my-4 flex items-center justify-center">
+          <CustomText className="text-yellow font-semibold text-xl text-center">
+            {title}
+          </CustomText>
+        </div>
+      </div>
+      <ul className="flex flex-col items-start gap-2 self-start mx-12">
+        {list.map(({ label, link }, index) => (
           <li key={index} className="text-white text-center">
-            {item}
+            <CustomLink href={link} target="__blank">
+              <span className="mr-2">&bull;</span>
+              {label}
+            </CustomLink>
           </li>
         ))}
       </ul>

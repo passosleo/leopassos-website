@@ -14,7 +14,7 @@ export function CustomLink({
     <a
       {...rest}
       className={twMerge(
-        'hover:text-yellow border-b-2',
+        'hover:text-yellow border-b-2 cursor-pointer',
         isSelected ? 'border-yellow' : 'border-transparent',
         className,
       )}

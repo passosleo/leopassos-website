@@ -1,8 +1,8 @@
+import { logEventAnalytics } from '../../firebase';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { CustomText } from '../../components/CustomText';
 import { CustomButton } from '../../components/CustomButton';
 import { CustomSection } from '../../components/CustomSection';
-import { CustomText } from '../../components/CustomText';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import { logEventAnalytics } from '../../firebase';
 
 export function About() {
   return (

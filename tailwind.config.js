@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import { colors, sizes } from './src/theme';
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
@@ -10,49 +11,11 @@ export default {
       '2xl': '96em',
     },
     extend: {
-      colors: {
-        yellow: '#FFB442',
-        white: '#FBFBFB',
-        black: '#111111',
-        grey: {
-          light: '#AAAAAA',
-          dark: '#222222',
-        },
-      },
-      transformOrigin: {
-        'top-center': 'top center',
-        'bottom-center': 'bottom center',
-      },
-      transitionProperty: {
-        height: 'height',
-      },
-      width: {
-        fit: 'fit-content',
-        modal: '600px',
-      },
-      height: {
-        fit: 'fit-content',
-        modal: '600px',
-      },
-      minWidth: {
-        320: '320px',
-        520: '520px',
-        640: '640px',
-        768: '768px',
-        960: '960px',
-        1024: '1024px',
-      },
-      minHeight: {
-        modal: '600px',
-        '300px': '300px',
-      },
-      borderWidth: {
-        6: '6px',
-      },
-      maxHeight: {
-        modal: '600px',
-        '300px': '300px',
-      },
+      colors,
+      width: sizes,
+      height: sizes,
+      minWidth: sizes,
+      minHeight: sizes,
       keyframes: {
         heightModalAnimation: {
           '0%': {
