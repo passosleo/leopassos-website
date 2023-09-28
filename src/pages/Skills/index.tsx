@@ -11,52 +11,53 @@ export function Skills() {
       className="flex-row flex-wrap justify-center items-center gap-10"
     >
       <SkillCard
-        logo={CodeIcon}
+        icon={CodeIcon}
         title="Languages and Technologies"
-        list={[
+        links={[
           {
             label: 'JavaScript',
-            link: 'https://developer.mozilla.org/docs/Web/JavaScript',
+            href: 'https://developer.mozilla.org/docs/Web/JavaScript',
           },
-          { label: 'TypeScript', link: 'https://www.typescriptlang.org/' },
-          { label: 'Node.js', link: 'https://nodejs.org/en' },
+          { label: 'TypeScript', href: 'https://www.typescriptlang.org/' },
+          { label: 'Node.js', href: 'https://nodejs.org/en' },
           {
             label: 'C#',
-            link: 'https://dotnet.microsoft.com/en-us/languages/csharp',
+            href: 'https://dotnet.microsoft.com/en-us/languages/csharp',
           },
           {
             label: 'HTML',
-            link: 'https://developer.mozilla.org/docs/Web/HTML',
+            href: 'https://developer.mozilla.org/docs/Web/HTML',
           },
-          { label: 'CSS', link: 'https://developer.mozilla.org/docs/Web/CSS' },
+          { label: 'CSS', href: 'https://developer.mozilla.org/docs/Web/CSS' },
           {
             label: 'SQL',
-            link: 'https://www.w3schools.com/sql/sql_intro.asp',
+            href: 'https://www.w3schools.com/sql/sql_intro.asp',
           },
         ]}
       />
       <SkillCard
-        logo={ToolIcon}
+        icon={FrameworkIcon}
         title="Libraries and Frameworks"
-        list={[
-          { label: 'React', link: 'https://react.dev/' },
-          { label: 'NextJS', link: 'https://nextjs.org/' },
-          { label: 'Express', link: 'https://expressjs.com/' },
-          { label: 'EggJS', link: 'https://www.eggjs.org/' },
-          { label: 'Nest', link: 'https://nestjs.com/' },
-          { label: 'React Native', link: 'https://reactnative.dev/' },
+        links={[
+          { label: 'React', href: 'https://react.dev/' },
+          { label: 'NextJS', href: 'https://nextjs.org/' },
+          { label: 'Express', href: 'https://expressjs.com/' },
+          { label: 'EggJS', href: 'https://www.eggjs.org/' },
+          { label: 'Nest', href: 'https://nestjs.com/' },
+          { label: '.NET', href: 'https://dotnet.microsoft.com/' },
+          { label: 'React Native', href: 'https://reactnative.dev/' },
         ]}
       />
       <SkillCard
-        logo={FrameworkIcon}
+        icon={ToolIcon}
         title="Tools and Utilities"
-        list={[
-          { label: 'Git', link: 'https://git-scm.com/' },
-          { label: 'Keycloak', link: 'https://www.keycloak.org/' },
-          { label: 'Firebase', link: 'https://firebase.google.com/' },
-          { label: 'Docker', link: 'https://www.docker.com/' },
-          { label: 'Portainer', link: 'https://www.portainer.io/' },
-          { label: 'NGINX', link: 'https://www.nginx.com/' },
+        links={[
+          { label: 'Git', href: 'https://git-scm.com/' },
+          { label: 'Keycloak', href: 'https://www.keycloak.org/' },
+          { label: 'Firebase', href: 'https://firebase.google.com/' },
+          { label: 'Docker', href: 'https://www.docker.com/' },
+          { label: 'Portainer', href: 'https://www.portainer.io/' },
+          { label: 'NGINX', href: 'https://www.nginx.com/' },
         ]}
       />
     </CustomSection>

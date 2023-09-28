@@ -1,28 +1,56 @@
 export function useLocalStorage() {
-  function storeValue(key: string, value: any) {
+  function storeData<T>(key: string, data: T) {
     try {
-      localStorage.setItem(key, JSON.stringify(value));
-    } catch (error) {
-      throw new Error(error as string);
+      if (typeof window !== 'undefined') {
+        localStorage.setItem(key, JSON.stringify(data));
+
+        return true;
+      }
+      return false;
+    } catch {
+      return false;
     }
   }
 
-  function getStoredValue(key: string, defaultValue: any = null) {
+  function getStoredData<T>(
+    key: string,
+    defaultData: T | null = null,
+  ): T | null {
     try {
-      const item = localStorage.getItem(key);
-      if (!item) return defaultValue;
-      return JSON.parse(item);
-    } catch (error) {
-      return null;
+      if (typeof window !== 'undefined') {
+        const item = localStorage.getItem(key);
+        if (!item) return defaultData;
+        return JSON.parse(item) as T;
+      }
+      return defaultData;
+    } catch {
+      return defaultData;
+    }
+  }
+
+  function deleteStoredData(key: string) {
+    try {
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem(key);
+        return true;
+      }
+      return false;
+    } catch {
+      return false;
     }
   }
 
   function clearStorage() {
     try {
-      localStorage.clear();
-    } catch (error) {
-      throw new Error(error as string);
+      if (typeof window !== 'undefined') {
+        localStorage.clear();
+        return true;
+      }
+      return false;
+    } catch {
+      return false;
     }
   }
-  return { storeValue, getStoredValue, clearStorage };
+
+  return { storeData, getStoredData, deleteStoredData, clearStorage };
 }
