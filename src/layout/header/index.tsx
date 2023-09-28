@@ -13,27 +13,28 @@ export function Header() {
             {
               label: 'about',
               href: '#about',
-              onClick: () => logEventAnalytics('click_about_section'),
+              onClick: () => logEventAnalytics('[header]click_about_section'),
             },
             {
               label: 'experience',
               href: '#experience',
-              onClick: () => logEventAnalytics('click_experience_section'),
+              onClick: () =>
+                logEventAnalytics('[header]click_experience_section'),
             },
             {
               label: 'skills',
               href: '#skills',
-              onClick: () => logEventAnalytics('click_skills_section'),
+              onClick: () => logEventAnalytics('[header]click_skills_section'),
             },
             {
               label: 'contact',
               href: '#contact',
-              onClick: () => logEventAnalytics('click_contact_section'),
+              onClick: () => logEventAnalytics('[header]click_contact_section'),
             },
             {
               label: 'resume',
               href: '#resume',
-              onClick: () => logEventAnalytics('click_resume'),
+              onClick: () => logEventAnalytics('[header]click_resume'),
             },
           ]}
         />

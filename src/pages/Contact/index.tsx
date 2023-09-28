@@ -1,13 +1,12 @@
-import { CustomButton } from '../../components/CustomButton';
-import { CustomSection } from '../../components/CustomSection';
-import { CustomText } from '../../components/CustomText';
 import EmailIcon from '@mui/icons-material/Email';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import { CustomCard } from '../../components/CustomCard';
-import { CustomInput } from '../../components/CustomInput';
-import { CustomForm } from '../../components/CustomForm';
+import { ContactForm } from './components/ContactForm';
+import { CustomText } from '../../components/CustomText';
+import { ContactButtons } from './components/ContactButtons';
+import { CustomSection } from '../../components/CustomSection';
+import { logEventAnalytics } from '../../firebase';
 
 export function Contact() {
   return (
@@ -23,48 +22,44 @@ export function Contact() {
         I would be very pleased to help you :)
       </CustomText>
       <div className="flex flex-wrap gap-20 justify-around items-center w-full mt-20">
-        <div className="flex flex-col gap-8 max-w-sm w-full">
-          <CustomButton
-            className="w-full justify-between px-10 sm:px-20 font-normal"
-            rightIcon={<EmailIcon />}
-          >
-            Send e-mail
-          </CustomButton>
-          <CustomButton
-            className="w-full justify-between px-10 sm:px-20 font-normal"
-            rightIcon={<WhatsAppIcon />}
-          >
-            Send message
-          </CustomButton>
-          <CustomButton
-            className="w-full justify-between px-10 sm:px-20 font-normal"
-            rightIcon={<LinkedInIcon />}
-          >
-            Connect on LinkedIn
-          </CustomButton>
-          <CustomButton
-            className="w-full justify-between px-10 sm:px-20 font-normal"
-            rightIcon={<GitHubIcon />}
-          >
-            Checkout Github
-          </CustomButton>
-        </div>
-        <CustomCard className="max-w-md w-full p-8">
-          <CustomForm onSubmit={(data) => console.log(data)}>
-            <CustomInput label="Name" name="name" />
-            <CustomInput label="E-mail *" type="email" name="email" required />
-            <CustomInput
-              label="Message *"
-              name="message"
-              required
-              inputType="textarea"
-              minLength={10}
-            />
-            <CustomButton type="submit" className="mt-5">
-              Send
-            </CustomButton>
-          </CustomForm>
-        </CustomCard>
+        <ContactButtons
+          buttons={[
+            {
+              label: 'Send e-mail',
+              href: 'mailto:leonardopassos98@gmail.com?subject=Hello%20Leo!%20I%20saw%20your%20portfolio%20and%20I%20would%20like%20to%20talk%20to%20you.',
+              target: '_self',
+              icon: <EmailIcon />,
+              onClick: () => logEventAnalytics('[contact]click_send_email'),
+            },
+            {
+              label: 'Send message',
+              href: 'https://wa.me/5551993794314?text=Hello%20Leo!%20I%20saw%20your%20portfolio%20and%20I%20would%20like%20to%20talk%20to%20you.',
+              icon: <WhatsAppIcon />,
+              onClick: () => logEventAnalytics('[contact]click_send_whatsapp'),
+            },
+            {
+              label: 'Send message',
+              href: 'https://wa.me/5551999999999?text=Hello%20Leo!%20I%20saw%20your%20portfolio%20and%20I%20would%20like%20to%20talk%20to%20you.',
+              icon: <WhatsAppIcon />,
+              onClick: () => logEventAnalytics('[contact]click_send_whatsapp'),
+            },
+            {
+              label: 'Connect on LinkedIn',
+              href: 'https://www.linkedin.com/in/passosleo/',
+              icon: <LinkedInIcon />,
+              onClick: () =>
+                logEventAnalytics('[contact]click_linkedin_profile'),
+            },
+            {
+              label: 'Checkout Github',
+              href: 'https://github.com/passosleo',
+              icon: <GitHubIcon />,
+              onClick: () => logEventAnalytics('[contact]click_github_profile'),
+            },
+          ]}
+        />
+
+        <ContactForm />
       </div>
     </CustomSection>
   );

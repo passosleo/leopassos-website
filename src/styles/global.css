@@ -3,12 +3,26 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background: #888888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
 html {
   font-family: 'Nunito', sans-serif;
   color: #FBFBFB;
   background-color: #111111;
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  scroll-behavior: smooth;
 }
 
 * {

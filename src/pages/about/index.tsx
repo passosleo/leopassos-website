@@ -28,7 +28,7 @@ export function About() {
             className="text-yellow"
             href="https://www.lighthouseit.com.br/"
             target="_blank"
-            onClick={() => logEventAnalytics('click_company_link')}
+            onClick={() => logEventAnalytics('[about]click_company_link')}
           >
             LighthouseIt.
           </a>
@@ -37,7 +37,7 @@ export function About() {
       <a
         href="https://github.com/passosleo"
         target="_blank"
-        onClick={() => logEventAnalytics('click_github_profile')}
+        onClick={() => logEventAnalytics('[about]click_github_profile')}
         className="w-fit"
       >
         <CustomButton rightIcon={<GitHubIcon />}>
