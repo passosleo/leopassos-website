@@ -1,0 +1,122 @@
+{
+  "pt": {
+    "header": {
+      "nav-1": "sobre",
+      "nav-2": "experiência",
+      "nav-3": "habilidades",
+      "nav-4": "contato",
+      "nav-5": "currículo"
+    },
+    "about": {
+      "title-1": "Olá, meu nome é",
+      "title-2": "Leonardo Passos.",
+      "title-3": "Eu crio soluções para a web.",
+      "description-1": "Sou um desenvolvedor web especializado em criar experiências digitais incríveis. Atualmente, estou cursando Tecnologia em Análise e Desenvolvimento de Sistemas e focado em construir soluções webs robustas, acessíveis e escaláveis na ",
+      "description-2": "LighthouseIt.",
+      "button-1": "Veja meu GitHub!"
+    },
+    "experience": {
+      "title-1": "Antes de me tornar um desenvolvedor, vivenciei outras experiências no mundo da TI que foram fundamentais para o meu crescimento profissional e com certeza me ajudaram a chegar até aqui.",
+      "timeline": {
+        "item-1": {
+          "title-1": "Academia da Informática",
+          "subtitle-1": "Técnico Gerente",
+          "subtitle-2": "2016 - 2019",
+          "item-1": "Consultoria e suporte em TI",
+          "item-2": "Atendimento Help Desk",
+          "item-3": "Manutenção de hardware e software",
+          "item-4": "Gerenciamento servidores",
+          "item-5": "Gerenciamento de redes",
+          "item-6": "Gerenciamento de backups"
+        },
+        "item-2": {
+          "title-1": "Grupo W2A Brasil",
+          "subtitle-1": "Software QA Tester",
+          "subtitle-2": "2021",
+          "item-1": "Testes de qualidade em aplicativos e sistemas",
+          "item-2": "Testes de aceitação de usuário",
+          "item-3": "Documentações de usabilidade",
+          "item-4": "Treinamento de usuários"
+        },
+        "item-3": {
+          "title-1": "LighthouseIt",
+          "subtitle-1": "Desenvolvedor Web Full-Stack",
+          "subtitle-2": "2021 - agora",
+          "item-1": "Desenvolvimento de aplicações web e mobile",
+          "item-2": "Criação e integração de REST API's",
+          "item-3": "Desenvolvimento Full-Stack",
+          "item-4": "Análise de sistemas"
+        }
+      }
+    },
+    "skills": {
+      "title-1": "Linguagens e Tecnologias",
+      "title-2": "Bibliotecas e Frameworks",
+      "title-3": "Ferramentas e Utilitários"
+    },
+    "contact": {
+      "title-1": "Fique à vontade para entrar em contato comigo em relação a oportunidades, projetos, trabalhos freelances, dúvidas ou assistência.",
+      "title-2": "Ficarei muito feliz em ajudar você :)"
+    }
+  },
+  "en": {
+    "header": {
+      "nav-1": "about",
+      "nav-2": "experience",
+      "nav-3": "skills",
+      "nav-4": "contact",
+      "nav-5": "resume"
+    },
+    "about": {
+      "title-1": "Hi, my name is",
+      "title-2": "Leonardo Passos.",
+      "title-3": "I build things for the web.",
+      "description-1": "I’m a full-stack web developer specialized in building amazing digital experiences. Currently, I’m studying Technology in Systems Analysis and Development and focused on building accessible, robust and fast web solutions at ",
+      "description-2": "LighthouseIt.",
+      "button-1": "Checkout my GitHub!"
+    },
+    "experience": {
+      "title-1": "Before becoming a web developer, I had other experiences in the IT world that were fundamental to my professional development and certainly helped me to get where I am.",
+      "timeline": {
+        "item-1": {
+          "title-1": "Academia da Informática",
+          "subtitle-1": "Technical Manager",
+          "subtitle-2": "2016 - 2019",
+          "item-1": "IT Support and consultancy",
+          "item-2": "Software Help Desk",
+          "item-3": "Hardware and software maintenance",
+          "item-4": "Server management",
+          "item-5": "Network management",
+          "item-6": "Backup management"
+        },
+        "item-2": {
+          "title-1": "Grupo W2A Brasil",
+          "subtitle-1": "Software QA Tester",
+          "subtitle-2": "2021",
+          "item-1": "Mobile and SaaS software testing",
+          "item-2": "User Acceptance Testing",
+          "item-3": "Software usability documentation",
+          "item-4": "User Training"
+        },
+        "item-3": {
+          "title-1": "LighthouseIt",
+          "subtitle-1": "Full-Stack Web Developer",
+          "subtitle-2": "2021 - now",
+          "item-1": "Accessible and responsive web pages and mobile applications",
+          "item-2": "Restful API’s and integrations",
+          "item-3": "Full-Stack development",
+          "item-4": "Software analyst"
+        }
+      }
+    },
+    "skills": {
+      "title-1": "Languages and Technologies",
+      "title-2": "Libraries and Frameworks",
+      "title-3": "Tools and Utilities"
+    },
+    "contact": {
+      "title-1": "Feel free to reach out to me regarding opportunities, projects, freelancing, inquiries, or assistance.",
+      "title-2": "I would be very pleased to help you :)"
+    }
+  }
+}

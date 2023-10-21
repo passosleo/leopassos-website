@@ -19,7 +19,7 @@ export function Experience() {
             list: [
               'IT Support and consultancy',
               'Software Help Desk',
-              'Hardware and software mainentance',
+              'Hardware and software maintenance',
               'Backup management',
               'Server management',
             ],
@@ -32,7 +32,7 @@ export function Experience() {
               'Mobile and SaaS software testing',
               'User Acceptance Testing',
               'Software usability documentation',
-              'User Training ',
+              'User Training',
             ],
           },
           {
