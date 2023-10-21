@@ -1,38 +1,39 @@
 import { Timeline } from '../../components/Timeline';
 import { CustomText } from '../../components/CustomText';
 import { CustomSection } from '../../components/CustomSection';
+import { useLocaleContext } from '../../locale/LocaleContext';
 
 export function Experience() {
+  const { locale } = useLocaleContext();
   return (
     <CustomSection id="experience" className="gap-20 justify-center">
       <CustomText className="text-2xl text-justify text-grey-light">
-        Before becoming a web developer, I had other experiences in the IT world
-        that were fundamental to my professional development and certainly
-        helped me to get where I am.
+        {locale['experience']['title-1']}
       </CustomText>
       <Timeline
         data={[
           {
-            title: 'Academia da Informática',
-            subtitle: 'Technical Manager',
-            year: '2018 - 2019',
+            title: locale['experience']['timeline']['item-1']['title-1'],
+            subtitle: locale['experience']['timeline']['item-1']['subtitle-1'],
+            year: locale['experience']['timeline']['item-1']['subtitle-2'],
             list: [
-              'IT Support and consultancy',
-              'Software Help Desk',
-              'Hardware and software maintenance',
-              'Backup management',
-              'Server management',
+              locale['experience']['timeline']['item-1']['list-1'],
+              locale['experience']['timeline']['item-1']['list-2'],
+              locale['experience']['timeline']['item-1']['list-3'],
+              locale['experience']['timeline']['item-1']['list-4'],
+              locale['experience']['timeline']['item-1']['list-5'],
+              locale['experience']['timeline']['item-1']['list-6'],
             ],
           },
           {
-            title: 'Grupo W2A Brasil',
-            subtitle: 'Software QA Tester',
-            year: '2021',
+            title: locale['experience']['timeline']['item-2']['title-1'],
+            subtitle: locale['experience']['timeline']['item-2']['subtitle-1'],
+            year: locale['experience']['timeline']['item-2']['subtitle-2'],
             list: [
-              'Mobile and SaaS software testing',
-              'User Acceptance Testing',
-              'Software usability documentation',
-              'User Training',
+              locale['experience']['timeline']['item-2']['list-1'],
+              locale['experience']['timeline']['item-2']['list-2'],
+              locale['experience']['timeline']['item-2']['list-3'],
+              locale['experience']['timeline']['item-2']['list-4'],
             ],
           },
           {
@@ -40,11 +41,10 @@ export function Experience() {
             subtitle: 'Full-Stack Web Developer',
             year: '2021 - now',
             list: [
-              'Accessible and responsive web pages and mobile applications',
-              'Restful API’s and integrations',
-              'Relational database management',
-              'Full-Stack development',
-              'Software analyst',
+              locale['experience']['timeline']['item-3']['list-1'],
+              locale['experience']['timeline']['item-3']['list-2'],
+              locale['experience']['timeline']['item-3']['list-3'],
+              locale['experience']['timeline']['item-3']['list-4'],
             ],
           },
         ]}

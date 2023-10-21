@@ -3,34 +3,33 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { CustomText } from '../../components/CustomText';
 import { CustomButton } from '../../components/CustomButton';
 import { CustomSection } from '../../components/CustomSection';
+import { useLocaleContext } from '../../locale/LocaleContext';
 
 export function About() {
+  const { locale } = useLocaleContext();
   return (
     <CustomSection id="about" className="gap-10 justify-center">
       <div className="flex flex-col gap-3">
         <CustomText className="font-extrabold text-2xl">
-          Hi, my name is
+          {locale['about']['title-1']}
         </CustomText>
         <CustomText className="font-extrabold text-5xl text-yellow">
-          Leonardo Passos.
+          {locale['about']['title-2']}
         </CustomText>
         <CustomText className="font-extrabold text-5xl text-grey-light">
-          I build things for the web.
+          {locale['about']['title-3']}
         </CustomText>
       </div>
       <div>
         <CustomText className="text-2xl text-justify text-grey-light max-w-4xl">
-          I’m a full-stack web developer specialized in building amazing digital
-          experiences. Currently, I’m studying Technology in Systems Analysis
-          and Development and focused on building accessible, robust and fast
-          web solutions at{' '}
+          {locale['about']['description-1']}
           <a
             className="text-yellow"
             href="https://www.lighthouseit.com.br/"
             target="_blank"
             onClick={() => logEventAnalytics('[about]click_company_link')}
           >
-            LighthouseIt.
+            {locale['about']['description-2']}
           </a>
         </CustomText>
       </div>
@@ -41,7 +40,7 @@ export function About() {
         className="w-fit"
       >
         <CustomButton rightIcon={<GitHubIcon />}>
-          Checkout my GitHub!
+          {locale['about']['button-1']}
         </CustomButton>
       </a>
     </CustomSection>

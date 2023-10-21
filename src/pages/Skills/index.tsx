@@ -3,8 +3,10 @@ import ToolIcon from '/tool_icon.svg';
 import FrameworkIcon from '/framework_icon.svg';
 import { SkillCard } from './components/SkillCard';
 import { CustomSection } from '../../components/CustomSection';
+import { useLocaleContext } from '../../locale/LocaleContext';
 
 export function Skills() {
+  const { locale } = useLocaleContext();
   return (
     <CustomSection
       id="skills"
@@ -12,7 +14,7 @@ export function Skills() {
     >
       <SkillCard
         icon={CodeIcon}
-        title="Languages and Technologies"
+        title={locale['skills']['title-1']}
         links={[
           {
             label: 'JavaScript',
@@ -37,7 +39,7 @@ export function Skills() {
       />
       <SkillCard
         icon={FrameworkIcon}
-        title="Libraries and Frameworks"
+        title={locale['skills']['title-2']}
         links={[
           { label: 'React', href: 'https://react.dev/' },
           { label: 'NextJS', href: 'https://nextjs.org/' },
@@ -50,7 +52,7 @@ export function Skills() {
       />
       <SkillCard
         icon={ToolIcon}
-        title="Tools and Utilities"
+        title={locale['skills']['title-3']}
         links={[
           { label: 'Git', href: 'https://git-scm.com/' },
           { label: 'Keycloak', href: 'https://www.keycloak.org/' },
