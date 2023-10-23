@@ -12,6 +12,8 @@ export function useLocalStorage() {
     }
   }
 
+  function getStoredData<T>(key: string): T | null;
+  function getStoredData<T>(key: string, defaultData: T): T;
   function getStoredData<T>(
     key: string,
     defaultData: T | null = null,
