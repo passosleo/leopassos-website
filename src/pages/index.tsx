@@ -3,6 +3,7 @@ import { Skills } from './Skills';
 import { Layout } from '../layout';
 import { Contact } from './Contact';
 import { Experience } from './Experience';
+import { Translator } from '../components/Translator';
 
 export function App() {
   return (
@@ -11,6 +12,7 @@ export function App() {
       <Experience />
       <Skills />
       <Contact />
+      <Translator />
     </Layout>
   );
 }
