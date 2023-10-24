@@ -6,7 +6,7 @@ import { useLocalStorage } from '../hooks/useLocalStorage';
 const LocaleContext = createContext({} as LocaleContextType);
 
 export function LocaleProvider({ children }: { children: React.ReactNode }) {
-  const { getStoredData } = useLocalStorage();
+  const { getStoredData, storeData } = useLocalStorage();
 
   const userLocale = (navigator.language.split('-')[0] ||
     (navigator as any).userLanguage.split('-')[0]) as Locale;
@@ -17,10 +17,16 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
 
   const currentLocale = storedLocale || (isUserLocaleValid ? userLocale : 'en');
 
-  const [locale] = useState(languages[currentLocale]);
+  const [locale, setLocale] = useState(languages[currentLocale]);
+
+  function handleLocaleChange(locale: Locale) {
+    if (locale === currentLocale) return;
+    storeData<Locale>('locale', locale);
+    setLocale(languages[locale]);
+  }
 
   return (
-    <LocaleContext.Provider value={{ locale }}>
+    <LocaleContext.Provider value={{ locale, handleLocaleChange }}>
       {children}
     </LocaleContext.Provider>
   );
