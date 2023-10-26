@@ -1,5 +1,6 @@
 {
   "pt": {
+    "language": "Português",
     "header": {
       "nav-1": "sobre",
       "nav-2": "experiência",
@@ -72,6 +73,7 @@
     }
   },
   "en": {
+    "language": "English",
     "header": {
       "nav-1": "about",
       "nav-2": "experience",

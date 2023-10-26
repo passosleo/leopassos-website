@@ -1,25 +1,35 @@
 import { useEffect, useState } from 'react';
+import { Link } from '../../../../../types/types';
 
-export function useNavBar() {
-  const [isOpen, setIsMenuOpen] = useState(false);
-  const [selectedLink, setSelectedLink] = useState('about');
-  const [activeLink, setActiveLink] = useState<string | null>(null);
+type Props = {
+  links: Link[];
+};
+
+export function useNavBar({ links }: Props) {
+  const defaultActive = links[0].href;
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [autoScrolling, setAutoScrolling] = useState(false);
+  const [selectedLink, setSelectedLink] = useState(defaultActive);
+  const [activeLink, setActiveLink] = useState(defaultActive);
 
-  function handleOnLinkClick(label: string) {
-    setSelectedLink(label);
+  function toggleMenu() {
+    setIsMenuOpen((prev) => !prev);
+  }
+
+  function handleOnLinkClick(href: string) {
+    setSelectedLink(href);
     setAutoScrolling(true);
-    if (isOpen) setIsMenuOpen(false);
+    if (isMenuOpen) setIsMenuOpen(false);
   }
 
   useEffect(() => {
     function observeElementVisibility() {
-      const elementIds = ['about', 'experience', 'skills', 'contact'];
+      const elementIds = links.map((link) => link.href);
       const windowHeight =
         window.innerHeight || document.documentElement.clientHeight;
 
       for (const [index, id] of elementIds.entries()) {
-        const element = document.getElementById(id);
+        const element = document.querySelector(id);
         if (element) {
           const rect = element.getBoundingClientRect();
           const topThreshold = index === 0 ? 0 : 250;
@@ -50,13 +60,13 @@ export function useNavBar() {
     return () => {
       window.removeEventListener('scroll', observeElementVisibility);
     };
-  }, [autoScrolling, selectedLink]);
+  }, [links, autoScrolling, selectedLink]);
 
   return {
-    isOpen,
-    setIsMenuOpen,
+    isMenuOpen,
+    toggleMenu,
+    activeLink,
     selectedLink,
     handleOnLinkClick,
-    activeLink,
   };
 }
