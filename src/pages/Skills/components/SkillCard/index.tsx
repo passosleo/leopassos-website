@@ -11,7 +11,10 @@ type Props = React.ComponentProps<'div'> & {
 
 export function SkillCard({ icon, title, links, ...props }: Props) {
   return (
-    <CustomCard {...props} className="p-8 w-72 h-116">
+    <CustomCard
+      {...props}
+      className="p-8 w-72 h-116 hover:scale-105 transition-all"
+    >
       <div className="flex flex-col items-center justify-center">
         <img src={icon} alt={title} className="w-24 h-24" />
         <div className="min-h-14 my-4 flex items-center justify-center">

@@ -25,7 +25,7 @@ export function Translator() {
     >
       <img src={GlobeIcon} alt="Idioma" className="w-7 h-7" />
 
-      <div className="flex items-center w-0 opacity-0 group-hover:w-32 group-hover:opacity-100 transition-all">
+      <div className="flex items-center w-0 opacity-0 group-hover:w-28 group-hover:opacity-100 transition-all">
         <p className="hidden group-hover:block opacity-0 group-hover:opacity-100 transition-all mx-auto">
           {locale['language']}
         </p>

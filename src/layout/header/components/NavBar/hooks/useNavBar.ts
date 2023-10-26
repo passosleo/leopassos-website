@@ -1,16 +1,12 @@
+import { NavBarProps } from '../types';
 import { useEffect, useState } from 'react';
-import { Link } from '../../../../../types/types';
 
-type Props = {
-  links: Link[];
-};
-
-export function useNavBar({ links }: Props) {
+export function useNavBar({ links }: NavBarProps) {
   const defaultActive = links[0].href;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [autoScrolling, setAutoScrolling] = useState(false);
-  const [selectedLink, setSelectedLink] = useState(defaultActive);
   const [activeLink, setActiveLink] = useState(defaultActive);
+  const [selectedLink, setSelectedLink] = useState(defaultActive);
 
   function toggleMenu() {
     setIsMenuOpen((prev) => !prev);

@@ -37,9 +37,9 @@ export function Experience() {
             ],
           },
           {
-            title: 'LighthouseIt',
-            subtitle: 'Full-Stack Web Developer',
-            year: '2021 - now',
+            title: locale['experience']['timeline']['item-3']['title-1'],
+            subtitle: locale['experience']['timeline']['item-3']['subtitle-1'],
+            year: locale['experience']['timeline']['item-3']['subtitle-2'],
             list: [
               locale['experience']['timeline']['item-3']['list-1'],
               locale['experience']['timeline']['item-3']['list-2'],

@@ -1,15 +1,11 @@
-import { useMediaQuery } from '../../../../hooks/useMediaQuery';
-import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from '../../../../types/types';
-import { CustomLink } from '../../../../components/CustomLink';
-import { useNavBar } from './hooks/useNavBar';
+import { NavBarProps } from './types';
 import { twMerge } from 'tailwind-merge';
+import { useNavBar } from './hooks/useNavBar';
+import MenuIcon from '@mui/icons-material/Menu';
+import { CustomLink } from '../../../../components/CustomLink';
+import { useMediaQuery } from '../../../../hooks/useMediaQuery';
 
-type Props = {
-  links: Link[];
-};
-
-export function NavBar({ links }: Props) {
+export function NavBar({ links }: NavBarProps) {
   const { isTabletOrMobile } = useMediaQuery();
   const { isMenuOpen, handleOnLinkClick, toggleMenu, activeLink } = useNavBar({
     links,
