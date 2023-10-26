@@ -1,5 +1,10 @@
 import { FirebaseOptions, initializeApp } from 'firebase/app';
-import { AnalyticsCallOptions, Item, getAnalytics, logEvent } from 'firebase/analytics';
+import {
+  AnalyticsCallOptions,
+  Item,
+  getAnalytics,
+  logEvent,
+} from 'firebase/analytics';
 
 const firebaseConfig: FirebaseOptions = {
   apiKey: 'AIzaSyCKRyk9Hj57hJVwE51IMxq4R4ztHaYkrXQ',
@@ -15,19 +20,19 @@ initializeApp(firebaseConfig);
 
 const analytics = getAnalytics();
 
+type AnalyticsEventParams = {
+  [key: string]: any;
+  coupon?: string;
+  currency?: string;
+  items?: Item[];
+  payment_type?: string;
+  value?: number;
+};
+
 export function logEventAnalytics(
   eventName: string,
-  eventParams?:
-    | {
-        [key: string]: any;
-        coupon?: string | undefined;
-        currency?: string | undefined;
-        items?: Item[] | undefined;
-        payment_type?: string | undefined;
-        value?: number | undefined;
-      }
-    | undefined,
-  options?: AnalyticsCallOptions | undefined,
+  eventParams?: AnalyticsEventParams,
+  options?: AnalyticsCallOptions,
 ) {
   return logEvent(analytics, eventName, eventParams, options);
 }

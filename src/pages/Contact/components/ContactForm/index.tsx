@@ -1,4 +1,4 @@
-import { ValidationError, useForm } from '@formspree/react';
+import { useForm } from '@formspree/react';
 import { CustomButton } from '../../../../components/CustomButton';
 import { CustomCard } from '../../../../components/CustomCard';
 import { CustomForm } from '../../../../components/CustomForm';
@@ -15,14 +15,19 @@ export function ContactForm() {
   return (
     <CustomCard className="max-w-md w-full p-8">
       <CustomForm onSubmit={handleSubmit}>
-        <CustomInput label={locale['contact']['form']['name']} name="name" />
+        <CustomInput
+          label={locale['contact']['form']['name']}
+          name="name"
+          autoComplete="name"
+        />
+
         <CustomInput
           label={locale['contact']['form']['email']}
-          type="email"
+          type="batata"
           name="email"
+          autoComplete="email"
           required
         />
-        <ValidationError prefix="E-mail" field="email" errors={form.errors} />
 
         <CustomInput
           label={locale['contact']['form']['message']}
@@ -30,11 +35,6 @@ export function ContactForm() {
           required
           inputType="textarea"
           minLength={10}
-        />
-        <ValidationError
-          prefix="Message"
-          field="message"
-          errors={form.errors}
         />
 
         <CustomButton type="submit" className="mt-5" disabled={form.submitting}>

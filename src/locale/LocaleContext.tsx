@@ -19,6 +19,10 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
 
   const [locale, setLocale] = useState(languages[currentLocale]);
 
+  const selectedLocale = Object.keys(languages).find(
+    (language) => languages[language as Locale] === locale,
+  ) as Locale;
+
   function handleLocaleChange(locale: Locale) {
     if (locale === currentLocale) return;
     storeData<Locale>('locale', locale);
@@ -26,7 +30,9 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <LocaleContext.Provider value={{ locale, handleLocaleChange }}>
+    <LocaleContext.Provider
+      value={{ locale, selectedLocale, handleLocaleChange }}
+    >
       {children}
     </LocaleContext.Provider>
   );
