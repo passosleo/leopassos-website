@@ -3,13 +3,13 @@ import { CustomLink } from '../../../../components/CustomLink';
 import { CustomText } from '../../../../components/CustomText';
 import { Link } from '../../../../types/generic';
 
-type Props = React.ComponentProps<'div'> & {
+type SkillCardProps = React.ComponentProps<'div'> & {
   icon: string;
   title: string;
   links: Link[];
 };
 
-export function SkillCard({ icon, title, links, ...props }: Props) {
+export function SkillCard({ icon, title, links, ...props }: SkillCardProps) {
   return (
     <CustomCard
       {...props}

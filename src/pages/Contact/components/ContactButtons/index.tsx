@@ -1,18 +1,19 @@
 import { twMerge } from 'tailwind-merge';
 import { CustomLink } from '../../../../components/CustomLink';
+import { LinkTarget } from '../../../../types/generic';
 
-type Props = {
+type ContactButtons = {
   buttons: {
     label: string;
     href: string;
-    target?: '_blank' | '_self' | '_parent' | '_top';
+    target?: LinkTarget;
     className?: string;
     onClick?: () => void;
     icon?: React.ReactNode;
   }[];
 };
 
-export function ContactButtons({ buttons }: Props) {
+export function ContactButtons({ buttons }: ContactButtons) {
   return (
     <div className="flex flex-col gap-8 max-w-sm w-full">
       {buttons.map(

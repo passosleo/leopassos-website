@@ -1,6 +1,6 @@
 import { twMerge } from 'tailwind-merge';
 
-type Props = React.ComponentProps<'input'> &
+type CustomInputProps = React.ComponentProps<'input'> &
   React.ComponentProps<'textarea'> & {
     name: string;
     inputType?: 'input' | 'textarea';
@@ -16,7 +16,7 @@ export function CustomInput({
   containerClassName,
   labelClassName,
   ...props
-}: Props) {
+}: CustomInputProps) {
   const id = props.id || props.name;
   return (
     <div className={twMerge('flex flex-col gap-1', containerClassName)}>

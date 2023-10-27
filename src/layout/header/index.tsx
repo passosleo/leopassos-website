@@ -35,8 +35,11 @@ export function Header() {
             },
             {
               label: locale['header']['nav-5'],
-              href: '#resume',
+              href: 'https://github.com/passosleo/resume/blob/main/Curriculo_Leonardo_Passos.pdf',
+              target: '_blank',
               onClick: () => logEventAnalytics('[header]click_resume'),
+              className:
+                'border-2 border-yellow text-yellow py-0 px-2 font-semibold rounded-md select-none hover:bg-yellow hover:text-black transition-colors duration-300',
             },
           ]}
         />

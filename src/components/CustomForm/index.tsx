@@ -1,12 +1,17 @@
 import { twMerge } from 'tailwind-merge';
 import { useCustomForm } from './hooks/useCustomForm';
 
-type Props = Omit<React.ComponentProps<'form'>, 'onSubmit'> & {
+type CustomFormProps = Omit<React.ComponentProps<'form'>, 'onSubmit'> & {
   children: React.ReactNode;
   onSubmit: (data: any) => void;
 };
 
-export function CustomForm({ children, className, onSubmit, ...props }: Props) {
+export function CustomForm({
+  children,
+  className,
+  onSubmit,
+  ...props
+}: CustomFormProps) {
   const { handleOnSubmit } = useCustomForm();
   return (
     <form

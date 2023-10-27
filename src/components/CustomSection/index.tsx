@@ -9,7 +9,7 @@ export function CustomSection({
     <section
       {...rest}
       className={twMerge(
-        'flex flex-col min-h-[calc(100vh_-_80px)] w-full py-10',
+        'relative flex flex-col min-h-[calc(100vh_-_80px)] w-full py-10',
         className,
       )}
     >

@@ -13,14 +13,19 @@ export function useNavBar({ links }: NavBarProps) {
   }
 
   function handleOnLinkClick(href: string) {
-    setSelectedLink(href);
-    setAutoScrolling(true);
+    const isLast = href === links[links.length - 1].href;
+
+    if (!isLast) {
+      setSelectedLink(href);
+      setAutoScrolling(true);
+    }
+
     if (isMenuOpen) setIsMenuOpen(false);
   }
 
   useEffect(() => {
     function observeElementVisibility() {
-      const elementIds = links.map((link) => link.href);
+      const elementIds = links.slice(0, -1).map((link) => link.href);
       const windowHeight =
         window.innerHeight || document.documentElement.clientHeight;
 

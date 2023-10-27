@@ -1,11 +1,18 @@
 import { twMerge } from 'tailwind-merge';
 
-type Props = React.ComponentProps<'button'> & {
+type CustomButtonProps = React.ComponentProps<'button'> & {
   rightIcon?: React.ReactNode;
   leftIcon?: React.ReactNode;
 };
 
-export function CustomButton({ children, className, type = 'button', rightIcon, leftIcon, ...rest }: Props) {
+export function CustomButton({
+  children,
+  className,
+  type = 'button',
+  rightIcon,
+  leftIcon,
+  ...rest
+}: CustomButtonProps) {
   return (
     <button
       {...rest}
@@ -15,9 +22,17 @@ export function CustomButton({ children, className, type = 'button', rightIcon, 
         className,
       )}
     >
-      {leftIcon && <span className="mr-2 flex items-center justify-center">{leftIcon}</span>}
+      {leftIcon && (
+        <span className="mr-2 flex items-center justify-center">
+          {leftIcon}
+        </span>
+      )}
       {children}
-      {rightIcon && <span className="ml-2 flex items-center justify-center">{rightIcon}</span>}
+      {rightIcon && (
+        <span className="ml-2 flex items-center justify-center">
+          {rightIcon}
+        </span>
+      )}
     </button>
   );
 }

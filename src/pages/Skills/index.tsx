@@ -4,6 +4,7 @@ import FrameworkIcon from '/framework_icon.svg';
 import { SkillCard } from './components/SkillCard';
 import { CustomSection } from '../../components/CustomSection';
 import { useLocaleContext } from '../../locale/LocaleContext';
+import { Background } from '../../components/Background';
 
 export function Skills() {
   const { locale } = useLocaleContext();
@@ -12,6 +13,8 @@ export function Skills() {
       id="skills"
       className="flex-row flex-wrap justify-center items-center gap-10"
     >
+      <Background />
+
       <SkillCard
         icon={CodeIcon}
         title={locale['skills']['title-1']}
@@ -37,6 +40,7 @@ export function Skills() {
           },
         ]}
       />
+
       <SkillCard
         icon={FrameworkIcon}
         title={locale['skills']['title-2']}
@@ -50,6 +54,7 @@ export function Skills() {
           { label: 'React Native', href: 'https://reactnative.dev/' },
         ]}
       />
+
       <SkillCard
         icon={ToolIcon}
         title={locale['skills']['title-3']}

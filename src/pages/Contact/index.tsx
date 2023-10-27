@@ -8,6 +8,7 @@ import { ContactButtons } from './components/ContactButtons';
 import { CustomSection } from '../../components/CustomSection';
 import { logEventAnalytics } from '../../firebase';
 import { useLocaleContext } from '../../locale/LocaleContext';
+import { Background } from '../../components/Background';
 
 export function Contact() {
   const { locale } = useLocaleContext();
@@ -16,12 +17,15 @@ export function Contact() {
       id="contact"
       className="flex-col flex-wrap justify-center items-center"
     >
+      <Background />
+
       <CustomText className="text-grey-light text-2xl text-center">
         {locale['contact']['title-1']}
       </CustomText>
       <CustomText className="text-grey-light text-2xl text-center">
         {locale['contact']['title-2']}
       </CustomText>
+
       <div className="flex flex-wrap gap-20 justify-around items-center w-full mt-20">
         <ContactButtons
           buttons={[

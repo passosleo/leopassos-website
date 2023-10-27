@@ -21,7 +21,7 @@ export function ContactForm() {
           <CheckCircleOutlineIcon
             fontSize="inherit"
             style={{ fontSize: '5rem' }}
-            className="opacity-10"
+            className="opacity-25 text-green-500"
           />
           <div>
             <p>{locale['contact']['form']['success-1']}</p>

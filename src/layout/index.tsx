@@ -1,11 +1,11 @@
 import { Footer } from './Footer';
 import { Header } from './Header';
 
-type Props = {
+type LayoutProps = {
   children: React.ReactNode;
 };
 
-export function Layout({ children }: Props) {
+export function Layout({ children }: LayoutProps) {
   return (
     <>
       <Header />

@@ -5,11 +5,11 @@ type TimelineData = {
   list: string[];
 };
 
-type Props = {
+type TimelineProps = {
   data: TimelineData[];
 };
 
-export function Timeline({ data }: Props) {
+export function Timeline({ data }: TimelineProps) {
   return (
     <div className="relative overflow-x-auto">
       <div className="flex justify-between w-full">

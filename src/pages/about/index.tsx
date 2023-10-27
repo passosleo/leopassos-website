@@ -1,5 +1,6 @@
 import { logEventAnalytics } from '../../firebase';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { Background } from '../../components/Background';
 import { CustomText } from '../../components/CustomText';
 import { CustomButton } from '../../components/CustomButton';
 import { CustomSection } from '../../components/CustomSection';
@@ -9,7 +10,7 @@ export function About() {
   const { locale } = useLocaleContext();
   return (
     <CustomSection id="about" className="gap-10 justify-center">
-      <div className="w-[690px] h-[400px] fixed bg-code-pattern right-24 bottom-24 -rotate-[20deg] -z-10" />
+      <Background />
 
       <div className="flex flex-col gap-3">
         <CustomText className="font-extrabold text-2xl">
@@ -22,22 +23,22 @@ export function About() {
           {locale['about']['title-3']}
         </CustomText>
       </div>
+
       <div>
         <CustomText className="text-2xl text-justify text-grey-light max-w-4xl">
           {locale['about']['description-1']}
           <a
             className="text-yellow"
             href="https://www.lighthouseit.com.br/"
-            target="_blank"
             onClick={() => logEventAnalytics('[about]click_company_link')}
           >
             {locale['about']['description-2']}
           </a>
         </CustomText>
       </div>
+
       <a
         href="https://github.com/passosleo"
-        target="_blank"
         onClick={() => logEventAnalytics('[about]click_github_profile')}
         className="w-fit"
       >

@@ -1,6 +1,6 @@
 import { twMerge } from 'tailwind-merge';
 
-type Props = React.ComponentProps<'a'> & {
+type CustomLinkProps = React.ComponentProps<'a'> & {
   isSelected?: boolean;
   rightIcon?: React.ReactNode;
   leftIcon?: React.ReactNode;
@@ -13,7 +13,7 @@ export function CustomLink({
   rightIcon,
   isSelected,
   ...rest
-}: Props) {
+}: CustomLinkProps) {
   return (
     <a
       {...rest}

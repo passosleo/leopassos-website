@@ -12,16 +12,17 @@ export function NavBar({ links }: NavBarProps) {
   });
 
   function renderLinks() {
-    return links.map(({ label, href, onClick }, index) => (
+    return links.map(({ label, href, onClick, className, target }, index) => (
       <CustomLink
         key={index}
         href={href}
+        target={target}
         onClick={() => {
           handleOnLinkClick(href);
           if (onClick) onClick();
         }}
         isSelected={activeLink === href}
-        className="hover:text-white text-lg"
+        className={`hover:text-white text-lg ${className ? className : ''}`}
       >
         {label}
       </CustomLink>

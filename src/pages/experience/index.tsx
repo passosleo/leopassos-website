@@ -2,14 +2,18 @@ import { Timeline } from '../../components/Timeline';
 import { CustomText } from '../../components/CustomText';
 import { CustomSection } from '../../components/CustomSection';
 import { useLocaleContext } from '../../locale/LocaleContext';
+import { Background } from '../../components/Background';
 
 export function Experience() {
   const { locale } = useLocaleContext();
   return (
     <CustomSection id="experience" className="gap-20 justify-center">
+      <Background />
+
       <CustomText className="text-2xl text-justify text-grey-light">
         {locale['experience']['title-1']}
       </CustomText>
+
       <Timeline
         data={[
           {
