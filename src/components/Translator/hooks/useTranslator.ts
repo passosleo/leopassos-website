@@ -3,13 +3,13 @@ import { useLocaleContext } from '../../../locale/LocaleContext';
 
 export function useTranslator() {
   const { locale, selectedLocale, handleLocaleChange } = useLocaleContext();
-  const [isSwitchIconRotating, setSwitchIconRotating] = useState(false);
+  const [isChangingLanguage, setChangingLanguage] = useState(false);
 
   function handleTranslate() {
-    if (!isSwitchIconRotating) {
-      setSwitchIconRotating(true);
+    if (!isChangingLanguage) {
+      setChangingLanguage(true);
       setTimeout(() => {
-        setSwitchIconRotating(false);
+        setChangingLanguage(false);
       }, 500);
     }
 
@@ -19,6 +19,6 @@ export function useTranslator() {
   return {
     locale,
     handleTranslate,
-    isSwitchIconRotating,
+    isChangingLanguage,
   };
 }

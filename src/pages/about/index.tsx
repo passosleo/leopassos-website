@@ -9,6 +9,8 @@ export function About() {
   const { locale } = useLocaleContext();
   return (
     <CustomSection id="about" className="gap-10 justify-center">
+      <div className="w-[690px] h-[400px] fixed bg-code-pattern right-24 bottom-24 -rotate-[20deg] -z-10" />
+
       <div className="flex flex-col gap-3">
         <CustomText className="font-extrabold text-2xl">
           {locale['about']['title-1']}

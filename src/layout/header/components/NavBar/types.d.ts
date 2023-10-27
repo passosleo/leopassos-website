@@ -1,4 +1,4 @@
-import { Link } from '../../../../types/types';
+import { Link } from '../../../../types/generic';
 
 export type NavBarProps = {
   links: Link[];

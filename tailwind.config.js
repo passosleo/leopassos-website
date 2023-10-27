@@ -17,30 +17,30 @@ export default {
       height: sizes,
       minWidth: sizes,
       minHeight: sizes,
+      backgroundImage: {
+        'code-pattern': "url('/bg_pattern.svg')",
+      },
       keyframes: {
-        heightModalAnimation: {
-          '0%': {
-            maxHeight: '0px',
-
-            opacity: 0,
+        flip: {
+          '0%, 100%': {
+            transform: 'rotateY(0deg)',
           },
-
-          '100%': {
-            maxHeight: '1080px',
-
-            opacity: 1,
+          '50%': {
+            transform: 'rotateY(90deg)',
           },
         },
-        fadeInAnimation: {
-          '0%': { opacity: 0 },
-
-          '100%': { opacity: 1 },
+        'custom-spin': {
+          '0%, 100%': {
+            transform: 'rotate(0deg)',
+          },
+          '100%': {
+            transform: 'rotate(360deg)',
+          },
         },
       },
-
       animation: {
-        heightModalAnimation: 'heightModalAnimation 500ms ease-in-out',
-        fadeInAnimation: ' fadeInAnimation 200ms ease-in-out',
+        flip: 'flip 500ms ease-in-out',
+        'custom-spin': 'custom-spin 500ms ease-in-out',
       },
     },
   },

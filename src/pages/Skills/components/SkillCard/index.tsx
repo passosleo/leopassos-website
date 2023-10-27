@@ -1,7 +1,7 @@
 import { CustomCard } from '../../../../components/CustomCard';
 import { CustomLink } from '../../../../components/CustomLink';
 import { CustomText } from '../../../../components/CustomText';
-import { Link } from '../../../../types/types';
+import { Link } from '../../../../types/generic';
 
 type Props = React.ComponentProps<'div'> & {
   icon: string;
