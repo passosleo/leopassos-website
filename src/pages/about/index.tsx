@@ -1,6 +1,6 @@
 import { logEventAnalytics } from '../../firebase';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { Background } from '../../components/Background';
+import { CustomBackground } from '../../components/CustomBackground';
 import { CustomText } from '../../components/CustomText';
 import { CustomButton } from '../../components/CustomButton';
 import { CustomSection } from '../../components/CustomSection';
@@ -10,7 +10,7 @@ export function About() {
   const { locale } = useLocaleContext();
   return (
     <CustomSection id="about" className="gap-10 justify-center">
-      <Background />
+      <CustomBackground variant="brackets" position="right" />
 
       <div className="flex flex-col gap-3">
         <CustomText className="font-extrabold text-2xl">

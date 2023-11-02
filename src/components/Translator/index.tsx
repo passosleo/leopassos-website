@@ -13,7 +13,8 @@ export function Translator() {
       <img
         src={GlobeIcon}
         alt="Idioma"
-        className={`w-7 h-7 ${isChangingLanguage ? 'animate-flip' : ''}`}
+        className={`w-7 h-7`}
+        // className={`w-7 h-7 ${isChangingLanguage ? 'animate-flip' : ''}`}
       />
 
       <div className="flex items-center w-0 group-hover:w-28 transition-all">

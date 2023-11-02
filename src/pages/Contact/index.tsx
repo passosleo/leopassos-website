@@ -8,7 +8,7 @@ import { ContactButtons } from './components/ContactButtons';
 import { CustomSection } from '../../components/CustomSection';
 import { logEventAnalytics } from '../../firebase';
 import { useLocaleContext } from '../../locale/LocaleContext';
-import { Background } from '../../components/Background';
+import { CustomBackground } from '../../components/CustomBackground';
 
 export function Contact() {
   const { locale } = useLocaleContext();
@@ -17,7 +17,7 @@ export function Contact() {
       id="contact"
       className="flex-col flex-wrap justify-center items-center"
     >
-      <Background />
+      <CustomBackground variant="prompt" position="left" />
 
       <CustomText className="text-grey-light text-2xl text-center">
         {locale['contact']['title-1']}

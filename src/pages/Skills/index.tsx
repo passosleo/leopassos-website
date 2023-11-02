@@ -4,7 +4,7 @@ import FrameworkIcon from '/framework_icon.svg';
 import { SkillCard } from './components/SkillCard';
 import { CustomSection } from '../../components/CustomSection';
 import { useLocaleContext } from '../../locale/LocaleContext';
-import { Background } from '../../components/Background';
+import { CustomBackground } from '../../components/CustomBackground';
 
 export function Skills() {
   const { locale } = useLocaleContext();
@@ -13,7 +13,7 @@ export function Skills() {
       id="skills"
       className="flex-row flex-wrap justify-center items-center gap-10"
     >
-      <Background />
+      <CustomBackground variant="object" position="right" />
 
       <SkillCard
         icon={CodeIcon}

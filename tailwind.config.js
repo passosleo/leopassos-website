@@ -18,7 +18,10 @@ export default {
       minWidth: sizes,
       minHeight: sizes,
       backgroundImage: {
-        'code-pattern': "url('/bg_pattern.svg')",
+        brackets: "url('/brackets_bg.svg')",
+        array: "url('/array_bg.svg')",
+        object: "url('/object_bg.svg')",
+        prompt: "url('/prompt_bg.svg')",
       },
       keyframes: {
         flip: {
