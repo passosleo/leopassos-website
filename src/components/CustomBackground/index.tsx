@@ -7,12 +7,16 @@ const variants = {
   prompt: 'bg-prompt',
 };
 
-type CustomBackgroundProps = {
+type CustomBackgroundProps = React.ComponentProps<'div'> & {
   variant: keyof typeof variants;
   position: 'left' | 'right';
 };
 
-export function CustomBackground({ variant, position }: CustomBackgroundProps) {
+export function CustomBackground({
+  variant,
+  position,
+  className,
+}: CustomBackgroundProps) {
   return (
     <div
       className={twMerge(
@@ -21,6 +25,7 @@ export function CustomBackground({ variant, position }: CustomBackgroundProps) {
         position === 'left'
           ? 'left-0 rotate-[15deg]'
           : 'right-0 -rotate-[15deg]',
+        className,
       )}
     />
   );

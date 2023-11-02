@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import { useForm } from '@formspree/react';
 import { CustomCard } from '../../../../components/CustomCard';
 import { CustomForm } from '../../../../components/CustomForm';
 import { CustomLink } from '../../../../components/CustomLink';
@@ -8,15 +6,15 @@ import { CustomInput } from '../../../../components/CustomInput';
 import { CustomButton } from '../../../../components/CustomButton';
 import { useLocaleContext } from '../../../../locale/LocaleContext';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import { useContactForm } from './hooks/useContactForm';
 
 export function ContactForm() {
   const { locale } = useLocaleContext();
-  const [form, handleSubmit] = useForm('maygveqj');
-  const [isSuccess, setIsSuccess] = useState(false);
+  const { handleSubmit, goBack, isSubmitting, isSucceeded } = useContactForm();
 
   return (
     <CustomCard className="flex items-center justify-center max-w-md min-h-[434px] w-full p-6">
-      {isSuccess ? (
+      {isSucceeded ? (
         <div className="flex flex-col items-center justify-center text-center gap-5">
           <CheckCircleOutlineIcon
             fontSize="inherit"
@@ -28,7 +26,7 @@ export function ContactForm() {
             <p>{locale['contact']['form']['success-2']}</p>
           </div>
           <CustomLink
-            onClick={() => setIsSuccess(false)}
+            onClick={goBack}
             className="font-bold text-center"
             leftIcon={
               <ArrowBackIosIcon
@@ -41,7 +39,7 @@ export function ContactForm() {
           </CustomLink>
         </div>
       ) : (
-        <CustomForm onSubmit={() => setIsSuccess(true)}>
+        <CustomForm onSubmit={handleSubmit}>
           <CustomInput
             label={locale['contact']['form']['name']}
             name="name"
@@ -53,7 +51,7 @@ export function ContactForm() {
             type="email"
             name="email"
             autoComplete="email"
-            // required
+            required
           />
 
           <CustomInput
@@ -61,14 +59,10 @@ export function ContactForm() {
             name="message"
             inputType="textarea"
             minLength={10}
-            // required
+            required
           />
 
-          <CustomButton
-            type="submit"
-            className="mt-5"
-            disabled={form.submitting}
-          >
+          <CustomButton type="submit" className="mt-5" isLoading={isSubmitting}>
             {locale['contact']['form']['send']}
           </CustomButton>
         </CustomForm>
