@@ -10,10 +10,10 @@ export function useContactForm() {
   }
 
   useEffect(() => {
-    if (form.succeeded) {
+    if (form.succeeded && !form.submitting) {
       setIsSucceeded(true);
     }
-  }, [form.succeeded]);
+  }, [form.succeeded, form.submitting]);
 
   return { handleSubmit, goBack, isSubmitting: form.submitting, isSucceeded };
 }
