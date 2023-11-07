@@ -1,16 +1,21 @@
-import { logEventAnalytics } from '../../firebase';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { CustomBackground } from '../../components/CustomBackground';
+import { logEventAnalytics } from '../../firebase';
 import { CustomText } from '../../components/CustomText';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 import { CustomButton } from '../../components/CustomButton';
-import { CustomSection } from '../../components/CustomSection';
 import { useLocaleContext } from '../../locale/LocaleContext';
+import { CustomSection } from '../../components/CustomSection';
+import { CustomBackground } from '../../components/CustomBackground';
 
 export function About() {
   const { locale } = useLocaleContext();
+  const { isTabletOrMobile } = useMediaQuery();
+
   return (
     <CustomSection id="about" className="gap-10 justify-center">
-      <CustomBackground variant="brackets" position="right" />
+      {!isTabletOrMobile && (
+        <CustomBackground variant="brackets" position="right" />
+      )}
 
       <div className="flex flex-col gap-3">
         <CustomText className="font-extrabold text-2xl">

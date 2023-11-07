@@ -2,18 +2,23 @@ import CodeIcon from '/code_icon.svg';
 import ToolIcon from '/tool_icon.svg';
 import FrameworkIcon from '/framework_icon.svg';
 import { SkillCard } from './components/SkillCard';
-import { CustomSection } from '../../components/CustomSection';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 import { useLocaleContext } from '../../locale/LocaleContext';
+import { CustomSection } from '../../components/CustomSection';
 import { CustomBackground } from '../../components/CustomBackground';
 
 export function Skills() {
   const { locale } = useLocaleContext();
+  const { isTabletOrMobile } = useMediaQuery();
+
   return (
     <CustomSection
       id="skills"
       className="flex-row flex-wrap justify-center items-center gap-10"
     >
-      <CustomBackground variant="object" position="right" />
+      {!isTabletOrMobile && (
+        <CustomBackground variant="object" position="right" />
+      )}
 
       <SkillCard
         icon={CodeIcon}

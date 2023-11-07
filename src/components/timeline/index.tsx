@@ -1,3 +1,6 @@
+import { twMerge } from 'tailwind-merge';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
+
 type TimelineData = {
   title: string;
   subtitle: string;
@@ -10,8 +13,15 @@ type TimelineProps = {
 };
 
 export function Timeline({ data }: TimelineProps) {
+  const { isTabletOrMobile } = useMediaQuery();
+
   return (
-    <div className="relative overflow-x-auto">
+    <div
+      className={twMerge(
+        'relative',
+        isTabletOrMobile ? 'overflow-x-scroll' : 'overflow-x-auto',
+      )}
+    >
       <div className="flex justify-between w-full">
         {data.map(({ title, subtitle, year, list }, index) => {
           const isUniqueItem = data.length === 1;

@@ -1,23 +1,28 @@
 import EmailIcon from '@mui/icons-material/Email';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { ContactForm } from './components/ContactForm';
-import { CustomText } from '../../components/CustomText';
-import { ContactButtons } from './components/ContactButtons';
-import { CustomSection } from '../../components/CustomSection';
 import { logEventAnalytics } from '../../firebase';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { ContactForm } from './components/ContactForm';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { CustomText } from '../../components/CustomText';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
+import { ContactButtons } from './components/ContactButtons';
 import { useLocaleContext } from '../../locale/LocaleContext';
+import { CustomSection } from '../../components/CustomSection';
 import { CustomBackground } from '../../components/CustomBackground';
 
 export function Contact() {
   const { locale } = useLocaleContext();
+  const { isTabletOrMobile } = useMediaQuery();
+
   return (
     <CustomSection
       id="contact"
       className="flex-col flex-wrap justify-center items-center"
     >
-      <CustomBackground variant="prompt" position="left" />
+      {!isTabletOrMobile && (
+        <CustomBackground variant="prompt" position="left" />
+      )}
 
       <CustomText className="text-grey-light text-2xl text-center">
         {locale['contact']['title-1']}

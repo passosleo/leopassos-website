@@ -1,14 +1,19 @@
 import { Timeline } from '../../components/Timeline';
 import { CustomText } from '../../components/CustomText';
-import { CustomSection } from '../../components/CustomSection';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 import { useLocaleContext } from '../../locale/LocaleContext';
+import { CustomSection } from '../../components/CustomSection';
 import { CustomBackground } from '../../components/CustomBackground';
 
 export function Experience() {
   const { locale } = useLocaleContext();
+  const { isTabletOrMobile } = useMediaQuery();
+
   return (
     <CustomSection id="experience" className="gap-20 justify-center">
-      <CustomBackground variant="array" position="left" />
+      {!isTabletOrMobile && (
+        <CustomBackground variant="array" position="left" />
+      )}
 
       <CustomText className="text-2xl text-justify text-grey-light">
         {locale['experience']['title-1']}
