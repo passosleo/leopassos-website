@@ -26,7 +26,7 @@ export function SkillCard({ icon, title, links, ...props }: SkillCardProps) {
       <ul className="flex flex-col items-start gap-2 self-start mx-12">
         {links.map(({ label, href }, index) => (
           <li key={index} className="text-white text-center">
-            <CustomLink href={href} target="__blank">
+            <CustomLink href={href} target="_blank">
               <span className="mr-2">&bull;</span>
               {label}
             </CustomLink>
