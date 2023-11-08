@@ -1,9 +1,11 @@
 import GlobeIcon from '/globe_icon.svg';
 import { useTranslator } from './hooks/useTranslator';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 
 export function Translator() {
   const { locale, handleTranslate, isChangingLanguage } = useTranslator();
+  const { isTabletOrMobile } = useMediaQuery();
 
   return (
     <div
@@ -13,25 +15,30 @@ export function Translator() {
       <img
         src={GlobeIcon}
         alt="Idioma"
-        className={`w-7 h-7`}
-        // className={`w-7 h-7 ${isChangingLanguage ? 'animate-flip' : ''}`}
+        className={
+          isTabletOrMobile
+            ? `w-7 h-7 ${isChangingLanguage ? 'animate-flip' : ''}`
+            : 'w-7 h-7'
+        }
       />
 
-      <div className="flex items-center w-0 group-hover:w-28 transition-all">
-        <p
-          className={`hidden group-hover:block mx-auto transition-transform ${
-            isChangingLanguage ? 'animate-flip' : ''
-          }`}
-        >
-          {locale['language']}
-        </p>
+      {!isTabletOrMobile && (
+        <div className="flex items-center w-0 group-hover:w-28 transition-all">
+          <p
+            className={`hidden group-hover:block mx-auto transition-transform ${
+              isChangingLanguage ? 'animate-flip' : ''
+            }`}
+          >
+            {locale['language']}
+          </p>
 
-        <AutorenewIcon
-          className={`invisible group-hover:visible transition-all ml-auto ${
-            isChangingLanguage ? 'animate-custom-spin' : ''
-          }`}
-        />
-      </div>
+          <AutorenewIcon
+            className={`invisible group-hover:visible transition-all ml-auto ${
+              isChangingLanguage ? 'animate-custom-spin' : ''
+            }`}
+          />
+        </div>
+      )}
     </div>
   );
 }

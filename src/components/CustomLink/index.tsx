@@ -12,11 +12,11 @@ export function CustomLink({
   className,
   rightIcon,
   isSelected,
-  ...rest
+  ...props
 }: CustomLinkProps) {
   return (
     <a
-      {...rest}
+      {...props}
       className={twMerge(
         'flex items-center hover:text-yellow border-b-2 cursor-pointer transition-all',
         isSelected ? 'border-yellow' : 'border-transparent',

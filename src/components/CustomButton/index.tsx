@@ -16,11 +16,11 @@ export function CustomButton({
   disabled,
   isLoading,
   onClick,
-  ...rest
+  ...props
 }: CustomButtonProps) {
   return (
     <button
-      {...rest}
+      {...props}
       type={(type === 'submit' && isLoading) || disabled ? 'button' : type}
       onClick={(e) => {
         if (disabled || isLoading) return;

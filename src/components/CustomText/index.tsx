@@ -1,8 +1,12 @@
 import { twMerge } from 'tailwind-merge';
 
-export function CustomText({ children, className, ...rest }: React.ComponentProps<'p'>) {
+export function CustomText({
+  children,
+  className,
+  ...props
+}: React.ComponentProps<'p'>) {
   return (
-    <p {...rest} className={twMerge('text-base', className)}>
+    <p {...props} className={twMerge('text-base lg:text-xs', className)}>
       {children}
     </p>
   );

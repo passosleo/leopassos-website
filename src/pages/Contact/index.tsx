@@ -24,10 +24,10 @@ export function Contact() {
         <CustomBackground variant="prompt" position="left" />
       )}
 
-      <CustomText className="text-grey-light text-2xl text-center">
+      <CustomText className="text-grey-light text-xl xl:text-2xl text-center">
         {locale['contact']['title-1']}
       </CustomText>
-      <CustomText className="text-grey-light text-2xl text-center">
+      <CustomText className="text-grey-light text-xl xl:text-2xl text-center">
         {locale['contact']['title-2']}
       </CustomText>
 
@@ -39,18 +39,21 @@ export function Contact() {
               href: 'mailto:leonardopassos98@gmail.com?subject=Hello%20Leo!%20I%20saw%20your%20portfolio%20and%20I%20would%20like%20to%20talk%20to%20you.',
               target: '_self',
               icon: <EmailIcon />,
+              className: 'text-base xl:text-lg',
               onClick: () => logEventAnalytics('[contact]click_send_email'),
             },
             {
               label: locale['contact']['buttons']['button-2'],
               href: 'https://wa.me/5551993794314?text=Hello%20Leo!%20I%20saw%20your%20portfolio%20and%20I%20would%20like%20to%20talk%20to%20you.',
               icon: <WhatsAppIcon />,
+              className: 'text-base xl:text-lg',
               onClick: () => logEventAnalytics('[contact]click_send_whatsapp'),
             },
             {
               label: locale['contact']['buttons']['button-3'],
               href: 'https://www.linkedin.com/in/passosleo/',
               icon: <LinkedInIcon />,
+              className: 'text-base xl:text-lg',
               onClick: () =>
                 logEventAnalytics('[contact]click_linkedin_profile'),
             },
@@ -58,6 +61,7 @@ export function Contact() {
               label: locale['contact']['buttons']['button-4'],
               href: 'https://github.com/passosleo',
               icon: <GitHubIcon />,
+              className: 'text-base xl:text-lg',
               onClick: () => logEventAnalytics('[contact]click_github_profile'),
             },
           ]}

@@ -62,7 +62,11 @@ export function ContactForm() {
             required
           />
 
-          <CustomButton type="submit" className="mt-5" isLoading={isSubmitting}>
+          <CustomButton
+            type="submit"
+            className="mt-5 text-base xl:text-lg"
+            isLoading={isSubmitting}
+          >
             {locale['contact']['form']['send']}
           </CustomButton>
         </CustomForm>

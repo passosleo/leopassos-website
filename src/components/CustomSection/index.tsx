@@ -3,11 +3,11 @@ import { twMerge } from 'tailwind-merge';
 export function CustomSection({
   children,
   className,
-  ...rest
+  ...props
 }: React.ComponentProps<'section'>) {
   return (
     <section
-      {...rest}
+      {...props}
       className={twMerge(
         'relative flex flex-col min-h-[calc(100vh_-_80px)] w-full py-10',
         className,

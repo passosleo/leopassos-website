@@ -22,7 +22,10 @@ export function CustomInput({
     <div className={twMerge('flex flex-col gap-1', containerClassName)}>
       {label && (
         <label
-          className={twMerge('text-grey-light font-semibold', labelClassName)}
+          className={twMerge(
+            'text-grey-light font-semibold text-sm xl:text-base',
+            labelClassName,
+          )}
           htmlFor={id}
         >
           {label}
