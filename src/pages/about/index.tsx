@@ -21,10 +21,10 @@ export function About() {
         <CustomText className="font-extrabold text-xl lg:text-2xl xl:text-2xl">
           {locale['about']['title-1']}
         </CustomText>
-        <CustomText className="font-extrabold text-4xl lg:text-2xl xl:text-5xl text-yellow">
+        <CustomText className="font-extrabold text-4xl lg:text-5xl xl:text-5xl text-yellow">
           {locale['about']['title-2']}
         </CustomText>
-        <CustomText className="font-extrabold text-4xl lg:text-2xl xl:text-5xl text-grey-light">
+        <CustomText className="font-extrabold text-4xl lg:text-5xl xl:text-5xl text-grey-light">
           {locale['about']['title-3']}
         </CustomText>
       </div>
