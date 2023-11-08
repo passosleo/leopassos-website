@@ -15,7 +15,7 @@ export function Experience() {
         <CustomBackground variant="array" position="left" />
       )}
 
-      <CustomText className="text-xl xl:text-2xl text-justify text-grey-light">
+      <CustomText className="text-xl lg:text-2xl xl:text-2xl text-justify text-grey-light">
         {locale['experience']['title-1']}
       </CustomText>
 

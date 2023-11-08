@@ -23,7 +23,7 @@ export function CustomInput({
       {label && (
         <label
           className={twMerge(
-            'text-grey-light font-semibold text-sm xl:text-base',
+            'text-grey-light font-semibold text-sm lg:text-base xl:text-base',
             labelClassName,
           )}
           htmlFor={id}

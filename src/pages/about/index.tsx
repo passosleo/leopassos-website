@@ -18,19 +18,19 @@ export function About() {
       )}
 
       <div className="flex flex-col gap-3">
-        <CustomText className="font-extrabold text-xl xl:text-2xl">
+        <CustomText className="font-extrabold text-xl lg:text-2xl xl:text-2xl">
           {locale['about']['title-1']}
         </CustomText>
-        <CustomText className="font-extrabold text-4xl xl:text-5xl text-yellow">
+        <CustomText className="font-extrabold text-4xl lg:text-2xl xl:text-5xl text-yellow">
           {locale['about']['title-2']}
         </CustomText>
-        <CustomText className="font-extrabold text-4xl xl:text-5xl text-grey-light">
+        <CustomText className="font-extrabold text-4xl lg:text-2xl xl:text-5xl text-grey-light">
           {locale['about']['title-3']}
         </CustomText>
       </div>
 
       <div>
-        <CustomText className="text-xl xl:text-2xl text-justify text-grey-light max-w-4xl">
+        <CustomText className="text-xl lg:text-2xl xl:text-2xl text-justify text-grey-light max-w-4xl">
           {locale['about']['description-1']}
           <a
             className="text-yellow"
@@ -50,7 +50,7 @@ export function About() {
       >
         <CustomButton
           rightIcon={<GitHubIcon />}
-          className="text-base xl:text-lg"
+          className="text-base lg:text-lg xl:text-lg"
         >
           {locale['about']['button-1']}
         </CustomButton>
