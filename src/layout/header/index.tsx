@@ -17,17 +17,17 @@ export function Header() {
               href: '#about',
               onClick: () => logEventAnalytics('[header]click_about_section'),
             },
-            {
-              label: locale['header']['nav-2'],
-              href: '#experience',
-              onClick: () =>
-                logEventAnalytics('[header]click_experience_section'),
-            },
-            {
-              label: locale['header']['nav-3'],
-              href: '#skills',
-              onClick: () => logEventAnalytics('[header]click_skills_section'),
-            },
+            // {
+            //   label: locale['header']['nav-2'],
+            //   href: '#experience',
+            //   onClick: () =>
+            //     logEventAnalytics('[header]click_experience_section'),
+            // },
+            // {
+            //   label: locale['header']['nav-3'],
+            //   href: '#skills',
+            //   onClick: () => logEventAnalytics('[header]click_skills_section'),
+            // },
             {
               label: locale['header']['nav-4'],
               href: '#contact',

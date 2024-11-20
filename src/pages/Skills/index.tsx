@@ -31,6 +31,10 @@ export function Skills() {
           { label: 'TypeScript', href: 'https://www.typescriptlang.org/' },
           { label: 'Node.js', href: 'https://nodejs.org/en' },
           {
+            label: 'Java',
+            href: 'https://www.java.com',
+          },
+          {
             label: 'C#',
             href: 'https://dotnet.microsoft.com/en-us/languages/csharp',
           },
@@ -50,11 +54,12 @@ export function Skills() {
         icon={FrameworkIcon}
         title={locale['skills']['title-2']}
         links={[
+          { label: 'Spring', href: 'https://spring.io/' },
+          { label: 'Fastify', href: 'https://fastify.dev/' },
+          { label: 'Express', href: 'https://expressjs.com/' },
+          { label: 'Nest', href: 'https://nestjs.com/' },
           { label: 'React', href: 'https://react.dev/' },
           { label: 'NextJS', href: 'https://nextjs.org/' },
-          { label: 'Express', href: 'https://expressjs.com/' },
-          { label: 'EggJS', href: 'https://www.eggjs.org/' },
-          { label: 'Nest', href: 'https://nestjs.com/' },
           { label: '.NET', href: 'https://dotnet.microsoft.com/' },
           { label: 'React Native', href: 'https://reactnative.dev/' },
         ]}
@@ -64,12 +69,11 @@ export function Skills() {
         icon={ToolIcon}
         title={locale['skills']['title-3']}
         links={[
-          { label: 'Git', href: 'https://git-scm.com/' },
-          { label: 'Keycloak', href: 'https://www.keycloak.org/' },
-          { label: 'Firebase', href: 'https://firebase.google.com/' },
           { label: 'Docker', href: 'https://www.docker.com/' },
-          { label: 'Portainer', href: 'https://www.portainer.io/' },
-          { label: 'NGINX', href: 'https://www.nginx.com/' },
+          { label: 'Keycloak', href: 'https://www.keycloak.org/' },
+          { label: 'Git', href: 'https://git-scm.com/' },
+          { label: 'JUnit', href: 'https://junit.org/junit5/' },
+          { label: 'Jest', href: 'https://jestjs.io/' },
         ]}
       />
     </CustomSection>

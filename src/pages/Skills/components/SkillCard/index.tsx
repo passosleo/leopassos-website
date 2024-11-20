@@ -13,12 +13,12 @@ export function SkillCard({ icon, title, links, ...props }: SkillCardProps) {
   return (
     <CustomCard
       {...props}
-      className="p-8 w-72 h-116 hover:scale-105 transition-all"
+      className="p-8 w-72 min-h-124 hover:scale-105 transition-all"
     >
       <div className="flex flex-col items-center justify-center">
         <img src={icon} alt={title} className="w-24 h-24" />
         <div className="min-h-14 my-4 flex items-center justify-center">
-          <CustomText className="text-yellow font-semibold text-xl text-center">
+          <CustomText className="text-yellow font-semibold lg:text-base xl:text-base text-center">
             {title}
           </CustomText>
         </div>
